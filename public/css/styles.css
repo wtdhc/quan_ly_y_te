@@ -1,0 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.khoi{
+    background-color: brown;
+    width: 100%;
+    height: 500px;
+}
