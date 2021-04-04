@@ -1,5 +1,5 @@
 <?php
     session_start();
-    require_once "./MVC/Bridge.php";
+    require_once "./MVC/bridge.php";
     $myApp = new App();
 ?>

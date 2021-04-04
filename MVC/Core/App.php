@@ -8,13 +8,14 @@
         {
             $arr = $this->getUrl();
             //Kiem tra controller
+            
             if(isset($arr[0])){
-                if(file_exists("./mvc/controller/".$arr[0].".php")){
+                if(file_exists("./mvc/controllers/".$arr[0].".php")){
                     $this->controller = $arr[0];
                     unset($arr[0]);
                 } 
             }
-                
+      
             require_once "./MVC/Controllers/".$this->controller.".php";
             $this->controller = new $this->controller;
             
@@ -27,6 +28,9 @@
             }
             //xu ly params
             $this->params = $arr?array_values($arr):[];
+
+            
+            
             call_user_func_array([$this->controller, $this->action], $this->params );
            
         }
